@@ -7,7 +7,7 @@ import CharactersAndHouses from './pages/CharactersAndHouses';
 import Home from './pages/Home';
 import NavBar from './components/NavBar';
 
-// import gameOfThronesAudio from './GoTThemeSong.mp3';
+import GoTThemeSong from './GoTThemeSong.mp3';
 
 function App() {
   return (
@@ -24,11 +24,11 @@ function App() {
             <Route path="/charactersandhouses" element={<CharactersAndHouses />} />
           </Routes>
         </div>
-        {/* <div className="audio-container">
+        <div className="audio-container">
           <audio controls autoPlay>
-            <source src={gameOfThronesAudio} type="audio/mp3" />
+            <source src={GoTThemeSong} type="audio/mp3" />
             Your browser does not support the audio element.
-          </audio> */}
+          </audio>
         </div>
       </div>
     </BrowserRouter>

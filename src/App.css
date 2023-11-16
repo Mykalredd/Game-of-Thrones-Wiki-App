@@ -30,16 +30,16 @@ body {
     /* background-color: rgba(255, 255, 255, 0.8); Add a semi-transparent white background to the content */
   }
   
-  /* .audio-container {
+  .audio-container {
     display: flex;
-    justify-content: flex-start; /* Align audio player to the left */
+    justify-content: flex-start; /*Align audio player to the left*/
     width: 100%;
     padding: 1rem;
   }
   
   audio {
-    width: 20%; /* Make the audio player fill the container width */
-  } */
+    width: 20%; /*Make the audio player fill the container width*/
+  } 
   
-  /* Your existing CSS rules... */
+  /* Your existing CSS rules...*/
   
