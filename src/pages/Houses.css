@@ -1,0 +1,13 @@
+.houses {
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .house-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+  

@@ -1,0 +1,10 @@
+h1, p {
+    background: linear-gradient(to bottom, #f2acf2, #8d98ed); 
+    -webkit-background-clip: text; /* Apply gradient as text color */
+    color: transparent; /* Hide the original text color */
+    display: inline-block; /* To make the background gradient visible */
+  
+    /* You can adjust the size, padding, or any other styles as needed */
+    font-size: 48px;
+    padding: 40px;
+  }

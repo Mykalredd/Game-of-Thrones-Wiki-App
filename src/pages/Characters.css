@@ -1,0 +1,13 @@
+.characters {
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .character-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+  
