@@ -1,21 +1,56 @@
 .character-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .character-name {
-    font-size: 18px;
-    margin: 0;
-  }
-  
-  img {
-    width: 50px;
-    height: 50px;
-    display: block;
-    margin: 10px auto;
-  }
-  
+  background-color: gray;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  text-align: left;
+  overflow: hidden; /* Ensure that the image doesn't overflow its container */
+}
+
+.character-card:hover {
+  transform: scale(1.02);
+  color: blue;
+  text-decoration: underline; 
+  text-decoration-color: blue;
+}
+
+.character-card a {
+  text-decoration: none;
+  color: #333;
+}
+
+.character-card h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: blue;
+  text-decoration: underline; 
+  text-decoration-color: blue;
+}
+
+.character-card p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.character-card img {
+  width: 80px;
+  height: 80px;
+  float: left; /* Float left to position the image to the left */
+  margin-right: 10px; /* Add some right margin for spacing between the image and text */
+}
+
+/* Apply a fixed height to the entire card */
+.character-card {
+  height: 200px; /* Adjust the value based on design preferences */
+}
+
+.character-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  align-items: stretch; /* Ensure equal height */
+  gap: 10px;
+}

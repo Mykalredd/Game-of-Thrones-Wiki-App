@@ -1,13 +1,13 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('./FireAndIce5.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  font-family: Cinzel,'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('./GoTCharacters.jpeg'); /* Updated the image path */
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+}
   
   .App {
     display: flex;
@@ -27,19 +27,16 @@ body {
   .content-container {
     flex: 1;
     padding: 1rem;
-    /* background-color: rgba(255, 255, 255, 0.8); Add a semi-transparent white background to the content */
   }
   
   .audio-container {
     display: flex;
-    justify-content: flex-start; /*Align audio player to the left*/
+    justify-content: flex-start; /*Set audio player to the left*/
     width: 100%;
     padding: 1rem;
   }
   
   audio {
-    width: 20%; /*Make the audio player fill the container width*/
+    width: 20%; /*Fill the container width*/
   } 
-  
-  /* Your existing CSS rules...*/
   

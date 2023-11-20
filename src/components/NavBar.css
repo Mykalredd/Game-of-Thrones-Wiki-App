@@ -4,6 +4,7 @@
     justify-content: space-around;
     align-items: center;
     height: 50px;
+    width: 100%;
   }
   
   .navbar a {
@@ -15,11 +16,11 @@
   }
   
   .navbar a:hover {
-    background-color: #71065b;
+    background-color: goldenrod;
   }
   
   .active {
-    background-color: #37043e;
+    background-color: blue;
     color: white;
   }
   

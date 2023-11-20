@@ -1,13 +1,29 @@
+/* src/pages/Characters.css */
 .characters {
-    padding: 20px;
-    color: #fff;
-  }
-  
-  .character-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-  }
+  padding: 10px;
+  color: red;
+}
+
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  align-items: center;
+  gap: 5px;
+}
+
+
+.loading button {
+  background-color: rgb(90, 87, 87);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.loading button:hover {
+  background-color: goldenrod;
+}
   

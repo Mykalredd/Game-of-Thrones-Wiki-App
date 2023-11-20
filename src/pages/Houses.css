@@ -1,13 +1,28 @@
+/* src/pages/Houses.css */
 .houses {
-    padding: 20px;
-    color: #fff;
-  }
-  
-  .house-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-  }
-  
+  padding: 10px;
+  color: #fff;
+}
+
+.house-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  align-items: center;
+  gap: 10px;
+}
+
+
+.loading button {
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.loading button:hover {
+  background-color: goldenrod;
+}
