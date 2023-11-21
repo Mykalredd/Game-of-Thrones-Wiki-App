@@ -2,7 +2,9 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Characters from './pages/Characters';
+import Character from './pages/Character';
 import Houses from './pages/Houses';
+import House from './pages/House';
 import CharactersAndHouses from './pages/CharactersAndHouses';
 import Home from './pages/Home';
 import NavBar from './components/NavBar';
@@ -17,10 +19,12 @@ function App() {
           <NavBar />
         </header>
         <div className="content-container">
-          <Routes>
+        <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/characters" element={<Characters />} />
+            <Route path="/characters/:id" element={<Character />} />
             <Route path="/houses" element={<Houses />} />
+            <Route path="/houses/:id" element={<House />} />
             <Route path="/charactersandhouses" element={<CharactersAndHouses />} />
           </Routes>
         </div>

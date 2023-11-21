@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: center;
   gap: 10px;
   background-color: rgb(90, 87, 87);
   border: 2px solid #ddd;
@@ -14,7 +14,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
   text-align: left;
-  height: 200px;
+  /* height: 200px; */
 
   }
   
