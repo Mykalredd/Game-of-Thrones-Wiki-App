@@ -1,6 +1,6 @@
 *Overview
 
-My “Game of Thrones” Wiki App is a dynamic web application designed to offer comprehensive insights into the characters and houses featured in the acclaimed "Game of Thrones" series. This platform enables users to delve into intricate details about characters, their affiliations, and significant information about the noble houses within the series.
+My “Game of Thrones” Wiki App (https://mykalredd.github.io/Game-of-Thrones-Wiki-App/) is a dynamic web application designed to offer comprehensive insights into the characters and houses featured in the acclaimed "Game of Thrones" series. This platform enables users to delve into intricate details about characters, their affiliations, and significant information about the noble houses within the series.
 
 *Key Features
 
