@@ -1,27 +1,31 @@
 // src/pages/Houses.js
 import React, { useState, useEffect } from 'react';
 import HouseCard from '../components/HouseCard';
-import axios from 'axios'; // Import Axios
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom for house links
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './Houses.css';
+import Pagination from '../components/Pagination';
 
 function Houses() {
   const [houses, setHouses] = useState([]);
   const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(false);
+  const [pageSize, setPageSize] = useState(5);
 
   useEffect(() => {
     const fetchHouses = async () => {
-      setLoading(true);
-      const response = await axios.get(
-        `https://anapioficeandfire.com/api/houses?page=${page}&pageSize=5`
-      );
-      setHouses((prevHouses) => [...prevHouses, ...response.data]);
-      setLoading(false);
+      try {
+        // Set loading state
+        const response = await axios.get(
+          `https://anapioficeandfire.com/api/houses?page=${page}&pageSize=${pageSize}`
+        );
+        setHouses((prevHouses) => [...prevHouses, ...response.data]);
+      } catch (error) {
+        console.error('Error fetching house data', error);
+      }
     };
 
     fetchHouses();
-  }, [page]);
+  }, [page, pageSize]); // Include pageSize in the dependency array
 
   const handleLoadMore = () => {
     setPage(page + 1);
@@ -32,16 +36,22 @@ function Houses() {
       <h1>Houses</h1>
       <div className="house-list">
         {houses.map((house) => (
-          <Link to={`/houses/${house.id}`} key={house.id}> {/* Wrap the HouseCard with a Link */}
+          <Link to={`/houses/${house.id}`} key={house.id}>
             <HouseCard house={house} />
           </Link>
         ))}
       </div>
-      <div className="loading">
-      {loading && <p>Loading...</p>}
-      {!loading && (
-        <button onClick={handleLoadMore}>Load More</button>
-      )}
+      <div className="pagination-container">
+        <Pagination
+          currentPage={page}
+          pageSize={pageSize}
+          onPageChange={(newPage) => setPage(newPage)}
+          onPageSizeChange={(newSize) => setPageSize(newSize)}
+        />
+      </div>
+      <div className="pageSize">
+        {pageSize && <p>pageSize...</p>}
+        {!pageSize && <button onClick={handleLoadMore}>Load More</button>}
       </div>
     </div>
   );

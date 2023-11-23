@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Game-of-Thrones-Wiki-App/static/css/main.7eb6da98.css",
+    "main.js": "/Game-of-Thrones-Wiki-App/static/js/main.9b2467ac.js",
+    "static/media/GoTCharacters.jpeg": "/Game-of-Thrones-Wiki-App/static/media/GoTCharacters.a8100f338dc446d120f2.jpeg",
+    "static/media/GoTThemeSong.mp3": "/Game-of-Thrones-Wiki-App/static/media/GoTThemeSong.7f2c7c7262e63b22ae5c.mp3",
+    "index.html": "/Game-of-Thrones-Wiki-App/index.html",
+    "main.7eb6da98.css.map": "/Game-of-Thrones-Wiki-App/static/css/main.7eb6da98.css.map",
+    "main.9b2467ac.js.map": "/Game-of-Thrones-Wiki-App/static/js/main.9b2467ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7eb6da98.css",
+    "static/js/main.9b2467ac.js"
+  ]
+}
