@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import './House.css';
+import './House.module.css';
 
 const House = () => {
   const { id } = useParams(); // Get the ID from the URL
@@ -47,6 +47,7 @@ const House = () => {
         const swornMembersResponses = await Promise.all(
           response.data.swornMembers.map((swornMemberUrl) => axios.get(swornMemberUrl))
         );
+
         houseData.swornMembers = swornMembersResponses.map((response) => response.data);
 
         setHouse(houseData);
@@ -75,8 +76,10 @@ const House = () => {
       <p>Heir: {house.heir || 'Unknown'}</p>
       <p>
         Sworn Members:{' '}
-        {house.swornMembers.length > 0
-          ? house.swornMembers.map((swornMember) => swornMember.name).join(', ')
+        {house.swornMembers?.length > 0
+          ? house.swornMembers.map((swornMember, index) => (
+              <span key={`${swornMember.name}-${index}`}>{swornMember.name}</span>
+            ))
           : 'Unknown'}
       </p>
     </div>

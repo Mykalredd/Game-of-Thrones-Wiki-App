@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
 import axios from 'axios';
-import './CharacterCard.css';
+import styles from './CharacterCard.module.css';
 
 const CharacterCard = ({ character }) => {
   const [allegianceNames, setAllegianceNames] = useState([]);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchAllegianceNames = async () => {
@@ -24,22 +25,27 @@ const CharacterCard = ({ character }) => {
     }
   }, [character.allegiances]);
 
+  const navigateToCharacterDetail = () => {
+    navigate(`/characters/${character.url.replace(/[^0-9]/g, "")}`);
+  };
+
   return (
-    <Link to={`/characters/${character.url.replace(/[^0-9]/g, "")}`} key={character.url}>
-      <div className="character-card">
-        <h2>{character.name || character.aliases[0]}</h2>
-        <img
-        src={process.env.PUBLIC_URL + (character.gender === 'Male' ? '/male-icon.png' : '/female-icon.png')}
+    <div className={styles.CharacterCard} onClick={navigateToCharacterDetail}>
+      <h2>{character.name || character.aliases[0]}</h2>
+      <img
+        src={
+          process.env.PUBLIC_URL +
+          (character.gender === 'Male' ? '/male-icon.png' : '/female-icon.png')
+        }
         alt="Gender Icon"
-        />
-        <p>Aliases: {character.aliases.join(', ') || 'Unknown'}</p>
-        <p>Gender: {character.gender || 'Unknown'}</p>
-        <p>Culture: {character.culture || 'Unknown'}</p>
-        <p>Titles: {character.titles.join(', ') || 'Unknown'}</p>
-        <p>Spouse: {character.spouse || 'Unknown'}</p>
-        <p>Allegiances: {allegianceNames.join(', ') || 'Unknown'}</p>
-      </div>
-    </Link>
+      />
+      <p>Aliases: {character.aliases.join(', ') || 'Unknown'}</p>
+      <p>Gender: {character.gender || 'Unknown'}</p>
+      <p>Culture: {character.culture || 'Unknown'}</p>
+      <p>Titles: {character.titles.join(', ') || 'Unknown'}</p>
+      <p>Spouse: {character.spouse || 'Unknown'}</p>
+      <p>Allegiances: {allegianceNames.join(', ') || 'Unknown'}</p>
+    </div>
   );
 };
 

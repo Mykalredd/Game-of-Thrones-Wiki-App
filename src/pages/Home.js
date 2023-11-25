@@ -1,15 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Home.css'; 
+// import { Link } from 'react-router-dom';
+import styles from './Home.module.css';
+import './Home.module.css'; 
+import GotHDImage from '../GoTHDImage.jpeg'; 
 
 const Home = () => {
   const imageAlt = "GoT Logo";
 
   return (
-    <div className="container">
-      <div className="text">
+    <div className={styles.container}>
+      <div className={styles.text}>
         <h1>Game of Thrones</h1>
-        <ul>
+        {/* <ul>
           <li>
             <Link to="/characters">Characters</Link>
           </li>
@@ -19,14 +21,13 @@ const Home = () => {
           <li>
             <Link to="/charactersandhouses">Characters & Houses</Link>
           </li>
-        </ul>
-        {/* <p>Are you interested in the Characters and Houses of the Game of Thrones series?</p> */}
-        <p>Do You Love The World of Westeros?</p>
-        <p>Explore & Enjoy My Wiki App!</p>
+        </ul> */}
+        <p>Are You a Fan of the Game of Thrones series?</p>
+        <p>If You Love The World of Westeros, Explore and Enjoy My Wiki App!</p>
       </div>
-      <div className="image">
+      <div className={styles.image}>
         {/* Update the image source */}
-        <img src="./GoTCharacters.jpeg" alt={imageAlt} />
+        <img src={GotHDImage} alt={imageAlt} />
       </div>
     </div>
   );

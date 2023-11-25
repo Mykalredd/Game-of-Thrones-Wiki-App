@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  /* font-family: 'Cinzel Decorative', regular; */
+  font-family: Roboto;
+  background: #fff2e1; /* Set a background color or image */
+}
+
+.container {
+  display: flex;
+  background-color: #fff2e1;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.text {
+  padding: 25px;
+  width: 50%;
+}
+
+h1 {
+  color: rgb(29, 28, 28);
+  font-weight: bold;
+  font-size: 4rem;
+  margin-bottom: 10%;
+}
+
+/* ul {
+  list-style-type: none;
+  padding: 3;
+  margin: 5;
+  font-size: 28px;
+  font-weight: bolder;
+} */
+
+/* ul li {
+  margin-bottom: 10px;
+} */
+
+/* ul li a {
+  text-decoration: none;
+  color: blue;
+} */
+
+ ul li a:hover {
+   color: goldenrod; 
+   color: rgb(29, 28, 28); 
+ } 
+
+p {
+  /* background: linear-gradient(to bottom, var(--gradient-color-1), var(--gradient-color-2)); */
+  /* color: transparent; */
+  /* display: inline-block;
+  font-weight: bold; */
+  font-size: 18px;
+  /* padding: 15px; 
+  padding-top: 5px; 
+  -webkit-background-clip: text;
+  background-clip: text; */
+  color: rgb(29, 28, 28);
+  
+}
+
+.image {
+  flex: 1;
+  text-align: center; /* Center the image horizontally */
+} 
+
+.image img {
+  width: 100%; /* Set the width to 100% to fill the container */
+  height: 100%; /* Maintain the aspect ratio */
+  max-width: 100%;
+}
+/* :root {
+  --gradient-color-1: white;
+  --gradient-color-2: gold;
+} */

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import './Character.css';
+import './Character.module.css';
 
 const Character = () => {
   const { id } = useParams();

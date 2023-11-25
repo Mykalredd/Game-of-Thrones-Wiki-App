@@ -1,65 +1,57 @@
-// src/components/HouseCard.js
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './HouseCard.css';
+import { useNavigate } from 'react-router-dom';
+import styles from './HouseCard.module.css';
 
 const HouseCard = ({ house }) => {
-  const [currentLord, setCurrentLord] = useState('');
-  const [overlord, setOverlord] = useState('');
-  const [heir, setHeir] = useState('');
-  const [loading, setLoading] = useState(true);
+  const [houseDetails, setHouseDetails] = useState({
+    currentLord: '',
+    overlord: '',
+    heir: '',
+    loading: true,
+  });
+
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchCurrentLord = async () => {
+    const fetchData = async () => {
       try {
-        if (house.currentLord) {
-          const response = await axios.get(house.currentLord);
-          setCurrentLord(response.data.name);
-        }
+        const [currentLordResponse, overlordResponse, heirResponse] = await Promise.all([
+          house.currentLord && axios.get(house.currentLord),
+          house.overlord && axios.get(house.overlord),
+          house.heir && axios.get(house.heir),
+        ]);
+
+        setHouseDetails({
+          currentLord: currentLordResponse?.data?.name || 'Unknown',
+          overlord: overlordResponse?.data?.name || 'Unknown',
+          heir: heirResponse?.data?.name || 'Unknown',
+          loading: false,
+        });
       } catch (error) {
-        console.error('Error fetching current lord data', error);
+        console.error('Error fetching data', error);
+        setHouseDetails({ loading: false });
       }
     };
 
-    const fetchOverlord = async () => {
-      try {
-        if (house.overlord) {
-          const response = await axios.get(house.overlord);
-          setOverlord(response.data.name);
-        }
-      } catch (error) {
-        console.error('Error fetching overlord data', error);
-      }
-    };
-
-    const fetchHeir = async () => {
-      try {
-        if (house.heir) {
-          const response = await axios.get(house.heir);
-          setHeir(response.data.name);
-        }
-      } catch (error) {
-        console.error('Error fetching heir data', error);
-      }
-    };
-
-    Promise.all([fetchCurrentLord(), fetchOverlord(), fetchHeir()])
-      .then(() => setLoading(false))
-      .catch((error) => console.error('Error fetching data', error));
+    fetchData();
   }, [house.currentLord, house.overlord, house.heir]);
 
+  const navigateToHouseDetail = () => {
+    // Extracting the numeric ID from the house.url
+    const houseId = house.url.match(/\d+/)[0];
+    navigate(`/houses/${houseId}`);
+  };
+
   return (
-    <Link to={`/houses/${house.url.replace(/[^0-9]/g, "")}`} key={house.url}>
-      <div className="house-card">
-        <h2>{house.name}</h2>
-        <p>Words: {house.words}</p>
-        <p>Seats: {house.seats.join(', ')}</p>
-        <p>Current Lord: {loading ? 'Loading...' : currentLord || 'Unknown'}</p>
-        <p>Overlord: {loading ? 'Loading...' : overlord || 'Unknown'}</p>
-        <p>Heir: {loading ? 'Loading...' : heir || 'Unknown'}</p>
-      </div>
-    </Link>
+    <div className={styles.HouseCard} onClick={navigateToHouseDetail}>
+      <h2>{house.name}</h2>
+      <p>Words: {house.words}</p>
+      <p>Seats: {house.seats.join(', ')}</p>
+      <p>Current Lord: {houseDetails.loading ? 'Loading...' : houseDetails.currentLord}</p>
+      <p>Overlord: {houseDetails.loading ? 'Loading...' : houseDetails.overlord}</p>
+      <p>Heir: {houseDetails.loading ? 'Loading...' : houseDetails.heir}</p>
+    </div>
   );
 };
 
