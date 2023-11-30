@@ -1,15 +1,24 @@
 {
   "files": {
-    "main.css": "/Game-of-Thrones-Wiki-App/static/css/main.7eb6da98.css",
-    "main.js": "/Game-of-Thrones-Wiki-App/static/js/main.9b2467ac.js",
-    "static/media/GoTCharacters.jpeg": "/Game-of-Thrones-Wiki-App/static/media/GoTCharacters.a8100f338dc446d120f2.jpeg",
-    "static/media/GoTThemeSong.mp3": "/Game-of-Thrones-Wiki-App/static/media/GoTThemeSong.7f2c7c7262e63b22ae5c.mp3",
+    "main.css": "/Game-of-Thrones-Wiki-App/static/css/main.5614c3a8.chunk.css",
+    "main.js": "/Game-of-Thrones-Wiki-App/static/js/main.f4cd61c7.chunk.js",
+    "main.js.map": "/Game-of-Thrones-Wiki-App/static/js/main.f4cd61c7.chunk.js.map",
+    "runtime-main.js": "/Game-of-Thrones-Wiki-App/static/js/runtime-main.91ede704.js",
+    "runtime-main.js.map": "/Game-of-Thrones-Wiki-App/static/js/runtime-main.91ede704.js.map",
+    "static/js/2.7b0a39d9.chunk.js": "/Game-of-Thrones-Wiki-App/static/js/2.7b0a39d9.chunk.js",
+    "static/js/2.7b0a39d9.chunk.js.map": "/Game-of-Thrones-Wiki-App/static/js/2.7b0a39d9.chunk.js.map",
     "index.html": "/Game-of-Thrones-Wiki-App/index.html",
-    "main.7eb6da98.css.map": "/Game-of-Thrones-Wiki-App/static/css/main.7eb6da98.css.map",
-    "main.9b2467ac.js.map": "/Game-of-Thrones-Wiki-App/static/js/main.9b2467ac.js.map"
+    "precache-manifest.c0702b7bb9e90d22e874d3de6da36119.js": "/Game-of-Thrones-Wiki-App/precache-manifest.c0702b7bb9e90d22e874d3de6da36119.js",
+    "service-worker.js": "/Game-of-Thrones-Wiki-App/service-worker.js",
+    "static/css/main.5614c3a8.chunk.css.map": "/Game-of-Thrones-Wiki-App/static/css/main.5614c3a8.chunk.css.map",
+    "static/js/2.7b0a39d9.chunk.js.LICENSE.txt": "/Game-of-Thrones-Wiki-App/static/js/2.7b0a39d9.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Game-of-Thrones-Wiki-App/static/media/GoTHDImage.889acd69.jpeg",
+    "static/media/GoTThemeSong.mp3": "/Game-of-Thrones-Wiki-App/static/media/GoTThemeSong.28d55787.mp3"
   },
   "entrypoints": [
-    "static/css/main.7eb6da98.css",
-    "static/js/main.9b2467ac.js"
+    "static/js/runtime-main.91ede704.js",
+    "static/js/2.7b0a39d9.chunk.js",
+    "static/css/main.5614c3a8.chunk.css",
+    "static/js/main.f4cd61c7.chunk.js"
   ]
 }
